@@ -1,0 +1,16 @@
+[
+{
+  "modid": "SpiceOfLife",
+  "name": "Spice of Life",
+  "description": "Adding a lil spice to your life",
+  "version": "0.01",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["SteamPunk_Devil"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
