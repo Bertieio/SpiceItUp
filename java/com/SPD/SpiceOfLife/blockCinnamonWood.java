@@ -5,12 +5,11 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class blockCinnamonWood extends Block {
-	public static final String NAME = "CinnamonWood";
 	
 	public blockCinnamonWood(){
 		super(Material.wood);
-		setBlockName(SpiceOfLife.MODID + "_" + blockCinnamonWood.NAME);
+		setBlockName(SpiceOfLife.MODID + "_CinnamonWood");
 		setCreativeTab(CreativeTabs.tabBlock);
-		setBlockTextureName(SpiceOfLife.MODID + ":" + blockCinnamonWood.NAME);
+		setBlockTextureName(SpiceOfLife.MODID + ":CinnamonWood");
 	}
 }

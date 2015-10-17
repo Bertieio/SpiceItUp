@@ -2,6 +2,7 @@ package com.SPD.SpiceOfLife;
  
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -21,15 +22,28 @@ public class SpiceOfLife
     //Blocks!
     public static Block cinnamonWood;
     
+    //Items!
+    public static Item cinnamonBark;
+    public static Item cinnamonPowder;    
+    
     //Initialization!
     
     @EventHandler
     public void preinit(FMLPreInitializationEvent event){
+    //Messages!
     	System.out.println("Started Loading " + SpiceOfLife.NAME + " " + SpiceOfLife.VERSION + " " + SpiceOfLife.VERSIONNAME);
-    	
+    
+    //Blocks!	
     	cinnamonWood = new blockCinnamonWood();
-    	
     	GameRegistry.registerBlock(cinnamonWood, "cinnamonWood");
+   
+    //Items!
+    	cinnamonBark = new itemCinnamonBark();
+    	GameRegistry.registerItem(cinnamonBark, "cinnamonBark");
+    	
+    	cinnamonPowder = new itemCinnamonPowder();
+    	GameRegistry.registerItem(cinnamonPowder, "cinnamonPowder");
+    
     }
     
     @EventHandler
