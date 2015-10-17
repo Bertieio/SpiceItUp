@@ -8,6 +8,7 @@ public class itemCinnamonBark extends Item {
 	{
 		setUnlocalizedName(SpiceOfLife.MODID + "_CinnamonBark");
 		setCreativeTab(CreativeTabs.tabFood);
+		setTextureName(SpiceOfLife.MODID + ":CinnamonBark");
 	}
 
 }
