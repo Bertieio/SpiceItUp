@@ -10,7 +10,7 @@ public class SpiceOfLifeEvents {
 	    public void onBlockHarvest(HarvestDropsEvent event){
 	    
 		//CinnamonBark  
-		  if (event.block == Blocks.log)
+		  if (event.block == Blocks.leaves && Math.random() <= 0.5F)
 	    		event.drops.add(new ItemStack(SpiceOfLife.cinnamonBark));
 	    }
 }
