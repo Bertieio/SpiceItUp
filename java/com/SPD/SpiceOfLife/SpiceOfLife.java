@@ -2,9 +2,12 @@ package com.SPD.SpiceOfLife;
  
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import cpw.mods.fml.common.Mod;
@@ -54,14 +57,16 @@ public class SpiceOfLife
     	cinnamonPowder = new itemCinnamonPowder();
     	GameRegistry.registerItem(cinnamonPowder, "cinnamonPowder");
     	
-    	cinnamonApple = new itemCinnamonApple("cinnamonApple", 4, 4, false, null);
+    	cinnamonApple = new itemCinnamonApple("CinnamonApple", 4, 0.3F, false, new PotionEffect(Potion.regeneration.id,40,3));
     	GameRegistry.registerItem(cinnamonApple, "cinnamonApple");
     //Recipes
     	GameRegistry.addShapelessRecipe(new ItemStack(SpiceOfLife.cinnamonPowder), new Object[]
     			{
     			SpiceOfLife.cinnamonBark
     			}
-    	);
+    	
+    		);
+    	GameRegistry.addRecipe(new ItemStack(SpiceOfLife.cinnamonApple), new Object[] {"###","#A#","###", '#', SpiceOfLife.cinnamonPowder, 'A', Items.apple});
     }
     
     @EventHandler
