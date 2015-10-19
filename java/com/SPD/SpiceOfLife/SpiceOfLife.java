@@ -3,6 +3,7 @@ package com.SPD.SpiceOfLife;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
@@ -28,9 +29,10 @@ public class SpiceOfLife
     
     //Items!
     public static Item cinnamonBark;
-    public static Item cinnamonPowder;    
+    public static Item cinnamonPowder;  
     
-    //Initialization!
+    public static ItemFood cinnamonApple;    
+    //Initialisation!
     
     @EventHandler
     public void preinit(FMLPreInitializationEvent event){
@@ -51,13 +53,15 @@ public class SpiceOfLife
     	
     	cinnamonPowder = new itemCinnamonPowder();
     	GameRegistry.registerItem(cinnamonPowder, "cinnamonPowder");
-    
+    	
+    	cinnamonApple = new itemCinnamonApple("cinnamonApple", 4, 4, false, null);
+    	GameRegistry.registerItem(cinnamonApple, "cinnamonApple");
     //Recipes
     	GameRegistry.addShapelessRecipe(new ItemStack(SpiceOfLife.cinnamonPowder), new Object[]
     			{
     			SpiceOfLife.cinnamonBark
-    			
-    			});
+    			}
+    	);
     }
     
     @EventHandler
