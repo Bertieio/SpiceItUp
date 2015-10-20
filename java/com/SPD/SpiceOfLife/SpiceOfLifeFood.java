@@ -7,11 +7,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class itemCinnamonApple extends ItemFood {
+public class SpiceOfLifeFood extends ItemFood {
 
 	private PotionEffect[] effects;
 
-	public itemCinnamonApple(String unlocalizedName, int healAmount, float saturationModifier, boolean wolvesFavorite, PotionEffect... effects) {
+	public SpiceOfLifeFood(String unlocalizedName, int healAmount, float saturationModifier, boolean wolvesFavorite, PotionEffect... effects) {
 	    super(healAmount, saturationModifier, wolvesFavorite);
 	    this.setUnlocalizedName(SpiceOfLife.MODID + "_" + unlocalizedName);
 	    this.setTextureName(SpiceOfLife.MODID + ":" + unlocalizedName);

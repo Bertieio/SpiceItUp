@@ -1,6 +1,8 @@
 package com.SPD.SpiceOfLife;
  
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -47,17 +49,17 @@ public class SpiceOfLife
     	System.out.println("Started Loading " + SpiceOfLife.NAME + " " + SpiceOfLife.VERSION + " " + SpiceOfLife.VERSIONNAME);
     
     //Blocks!	
-    	cinnamonWood = new blockCinnamonWood();
-    //	GameRegistry.registerBlock(cinnamonWood, "cinnamonWood");
+    	cinnamonWood = new SpiceOfLifeBlock(Material.wood, "CinnamonWood", CreativeTabs.tabMaterials);
+    	GameRegistry.registerBlock(cinnamonWood, "cinnamonWood");
    
     //Items!
-    	cinnamonBark = new itemCinnamonBark();
+    	cinnamonBark = new SpiceOfLifeItem("CinnamonBark",CreativeTabs.tabFood);
     	GameRegistry.registerItem(cinnamonBark, "cinnamonBark");
     	
-    	cinnamonPowder = new itemCinnamonPowder();
+    	cinnamonPowder = new SpiceOfLifeItem("CinnamonPowder",CreativeTabs.tabFood);
     	GameRegistry.registerItem(cinnamonPowder, "cinnamonPowder");
     	
-    	cinnamonApple = new itemCinnamonApple("CinnamonApple", 4, 0.3F, false, new PotionEffect(Potion.regeneration.id,40,3));
+    	cinnamonApple = new SpiceOfLifeFood("CinnamonApple", 4, 0.3F, false, new PotionEffect(Potion.regeneration.id,40,3));
     	GameRegistry.registerItem(cinnamonApple, "cinnamonApple");
     //Recipes
     	GameRegistry.addShapelessRecipe(new ItemStack(SpiceOfLife.cinnamonPowder), new Object[]
