@@ -31,7 +31,7 @@ public class SpiceOfLife
     
     //Blocks!
     public static Block cinnamonWood;
-    
+    public static Block sapling;
     //Items!
     public static Item cinnamonBark;
     public static Item cinnamonPowder;  
@@ -49,9 +49,12 @@ public class SpiceOfLife
     	System.out.println("Started Loading " + SpiceOfLife.NAME + " " + SpiceOfLife.VERSION + " " + SpiceOfLife.VERSIONNAME);
     
     //Blocks!	
-    	cinnamonWood = new SpiceOfLifeBlock(Material.wood, "CinnamonWood", CreativeTabs.tabMaterials);
+    	cinnamonWood = new SpiceOfLifeBlock(Material.wood, "CinnamonWood", CreativeTabs.tabMaterials, 2.0F,  net.minecraft.block.Block.soundTypeWood, "axe", 0);
     	GameRegistry.registerBlock(cinnamonWood, "cinnamonWood");
    
+    //Saplings
+    	sapling = new SpiceOfLifeSapling().setBlockName("").setCreativeTab(CreativeTabs.tabDecorations);
+    	
     //Items!
     	cinnamonBark = new SpiceOfLifeItem("CinnamonBark",CreativeTabs.tabFood);
     	GameRegistry.registerItem(cinnamonBark, "cinnamonBark");
