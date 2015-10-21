@@ -8,3 +8,9 @@ Please feel free to suggest ideas and improvments.
 ##Things I need help with:
 - Textures
 - General code review and improvement
+
+##Objects currently in the game
+###Items:
+- Cinnamon Bark
+- Cinnamon Powder
+- Cinnamon Apple
