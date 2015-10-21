@@ -60,6 +60,8 @@ public class SpiceOfLife
     	cinnamonLeaf = new SpiceOfLifeLeaf("CinnamonLeaf");
     	GameRegistry.registerBlock(cinnamonLeaf, "cinnamonLeaf");
 
+    	cinnamonSapling = new SpiceOfLifeSapling(0);
+    	
     //Items!
     	cinnamonBark = new SpiceOfLifeItem("CinnamonBark",CreativeTabs.tabFood);
     	GameRegistry.registerItem(cinnamonBark, "cinnamonBark");

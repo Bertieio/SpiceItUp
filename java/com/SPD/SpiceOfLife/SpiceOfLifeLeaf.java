@@ -12,6 +12,7 @@ public class SpiceOfLifeLeaf extends Block{
 	public SpiceOfLifeLeaf(String name)
 	{
 		super(Material.leaves);
+		this.setBlockTextureName(SpiceOfLife.MODID + ":" + name);		
 		this.setBlockName(SpiceOfLife.MODID + "_" + name);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 		this.setStepSound(soundTypeGrass);
