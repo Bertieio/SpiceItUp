@@ -14,3 +14,5 @@ Please feel free to suggest ideas and improvments.
 - Cinnamon Bark
 - Cinnamon Powder
 - Cinnamon Apple
+##Blocks:
+- Cinnamon Wood
