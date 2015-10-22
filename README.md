@@ -1,4 +1,5 @@
 # SpiceOfLife
+##Minecraft 1.7.10
 Spice Of Life adds spices to the Minecraft as a early game replacement for potions. 
 Currently its very early in development and doesn't have a release date planed.
 
@@ -17,3 +18,4 @@ Please feel free to suggest ideas and improvments.
 
 ###Blocks:
 - Cinnamon Wood 
+- Cinnamon Leaves
