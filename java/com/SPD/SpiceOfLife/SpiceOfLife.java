@@ -10,8 +10,10 @@ import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
+import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -30,6 +32,8 @@ public class SpiceOfLife
     public static final String VERSIONNAME = "\"Angry Armadillo\"";
     
     //Blocks!
+    public static IWorldGenerator cinnamonTree;
+    
     public static Block cinnamonWood;
     public static Block cinnamonSapling;
     public static Block cinnamonLeaf;
@@ -50,7 +54,9 @@ public class SpiceOfLife
     	System.out.println("Started Loading " + SpiceOfLife.NAME + " " + SpiceOfLife.VERSION + " " + SpiceOfLife.VERSIONNAME);
    
     	
-    	
+   //World Gen
+    	cinnamonTree = (IWorldGenerator) new SpiceOfLifeTree();
+    	GameRegistry.registerWorldGenerator(cinnamonTree, 1);
     	
   //Cinnamon   	
     //Blocks!	
@@ -60,7 +66,8 @@ public class SpiceOfLife
     	cinnamonLeaf = new SpiceOfLifeLeaf("CinnamonLeaf");
     	GameRegistry.registerBlock(cinnamonLeaf, "cinnamonLeaf");
 
-    	cinnamonSapling = new SpiceOfLifeSapling(0);
+    	cinnamonSapling = new SpiceOfLifeSapling("cinnamon");
+    	GameRegistry.registerBlock(cinnamonSapling, "CinnamonSapling");
     	
     //Items!
     	cinnamonBark = new SpiceOfLifeItem("CinnamonBark",CreativeTabs.tabFood);
