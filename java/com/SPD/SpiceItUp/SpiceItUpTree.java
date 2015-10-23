@@ -1,4 +1,4 @@
-package com.SPD.SpiceOfLife;
+package com.SPD.SpiceItUp;
 
 import java.util.Random;
 
@@ -11,14 +11,14 @@ import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.common.IWorldGenerator;
 
 
-public class SpiceOfLifeTree extends WorldGenerator implements IWorldGenerator  {
+public class SpiceItUpTree extends WorldGenerator implements IWorldGenerator  {
 
-	public SpiceOfLifeTree()
+	public SpiceItUpTree()
 		{
 			super();
 		}
 
-		public SpiceOfLifeTree(boolean doNotify)
+		public SpiceItUpTree(boolean doNotify)
 		{
 			super(doNotify);
 		}
@@ -70,7 +70,7 @@ public class SpiceOfLifeTree extends WorldGenerator implements IWorldGenerator  
 				block = world.getBlock(x, y - 1, z);
 
 				if ((block.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP,
-						(IPlantable) SpiceOfLife.cinnamonSapling)) &&
+						(IPlantable) SpiceItUp.cinnamonSapling)) &&
 						y < worldHeight - treeHeight - 1)
 				{
 					for (yOffset = y; yOffset <= y + 1 + treeHeight; ++yOffset)
@@ -139,7 +139,7 @@ public class SpiceOfLifeTree extends WorldGenerator implements IWorldGenerator  
 
 					block = world.getBlock(x, y - 1, z);
 					if (!block.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP,
-							(IPlantable) SpiceOfLife.cinnamonSapling))
+							(IPlantable) SpiceItUp.cinnamonSapling))
 					{ // this HAPPENS. wtf?
 						return false; // abort, something went weird
 					}
@@ -169,7 +169,7 @@ public class SpiceOfLifeTree extends WorldGenerator implements IWorldGenerator  
 										block.canBeReplacedByLeaves(world, xOffset, yOffset, zOffset)))
 								{
 									this.setBlockAndNotifyAdequately(world, xOffset, yOffset, zOffset,
-											SpiceOfLife.cinnamonLeaf, 0);
+											SpiceItUp.cinnamonLeaf, 0);
 								}
 							}
 						}
@@ -184,7 +184,7 @@ public class SpiceOfLifeTree extends WorldGenerator implements IWorldGenerator  
 								block.isReplaceable(world, x, y + yOffset, z)) // replace snow
 						{
 							this.setBlockAndNotifyAdequately(world, x, y + yOffset, z,
-									SpiceOfLife.cinnamonWood, 1);
+									SpiceItUp.cinnamonWood, 1);
 						}
 					}
 

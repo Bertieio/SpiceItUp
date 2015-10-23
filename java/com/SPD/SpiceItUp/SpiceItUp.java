@@ -1,4 +1,4 @@
-package com.SPD.SpiceOfLife;
+package com.SPD.SpiceItUp;
  
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -22,11 +22,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
  
-@Mod(modid = SpiceOfLife.MODID, version = SpiceOfLife.VERSION)
-public class SpiceOfLife
+@Mod(modid = SpiceItUp.MODID, version = SpiceItUp.VERSION)
+public class SpiceItUp
 {
     //Mod Info!
-	public static final String MODID = "SpiceOfLife";
+	public static final String MODID = "SpiceItUp";
     public static final String VERSION = "0.01";
     public static final String NAME = "Spice Of Life";
     public static final String VERSIONNAME = "\"Angry Armadillo\"";
@@ -47,45 +47,45 @@ public class SpiceOfLife
     @EventHandler
     public void preinit(FMLPreInitializationEvent event){
     //Events!
-        MinecraftForge.EVENT_BUS.register(new SpiceOfLifeEvents());
+        MinecraftForge.EVENT_BUS.register(new SpiceItUpEvents());
 
     	
     //Messages!
-    	System.out.println("Started Loading " + SpiceOfLife.NAME + " " + SpiceOfLife.VERSION + " " + SpiceOfLife.VERSIONNAME);
+    	System.out.println("Started Loading " + SpiceItUp.NAME + " " + SpiceItUp.VERSION + " " + SpiceItUp.VERSIONNAME);
    
     	
    //World Gen
-    	cinnamonTree = (IWorldGenerator) new SpiceOfLifeTree();
+    	cinnamonTree = (IWorldGenerator) new SpiceItUpTree();
     	GameRegistry.registerWorldGenerator(cinnamonTree, 1);
     	
   //Cinnamon   	
     //Blocks!	
-    	cinnamonWood = new SpiceOfLifeLog(Material.wood, "CinnamonWood", CreativeTabs.tabMaterials, 2.0F,  net.minecraft.block.Block.soundTypeWood, "axe", 0);
+    	cinnamonWood = new SpiceItUpLog(Material.wood, "CinnamonWood", CreativeTabs.tabMaterials, 2.0F,  net.minecraft.block.Block.soundTypeWood, "axe", 0);
     	GameRegistry.registerBlock(cinnamonWood, "cinnamonWood");
       	
-    	cinnamonLeaf = new SpiceOfLifeLeaf("Cinnamon");
+    	cinnamonLeaf = new SpiceItUpLeaf("Cinnamon");
     	GameRegistry.registerBlock(cinnamonLeaf, "cinnamonLeaf");
 
-    	cinnamonSapling = new SpiceOfLifeSapling("Cinnamon");
+    	cinnamonSapling = new SpiceItUpSapling("Cinnamon");
     	GameRegistry.registerBlock(cinnamonSapling, "CinnamonSapling");
     	
     //Items!
-    	cinnamonBark = new SpiceOfLifeItem("CinnamonBark",CreativeTabs.tabFood);
+    	cinnamonBark = new SpiceItUpItem("CinnamonBark",CreativeTabs.tabFood);
     	GameRegistry.registerItem(cinnamonBark, "cinnamonBark");
     	
-    	cinnamonPowder = new SpiceOfLifeItem("CinnamonPowder",CreativeTabs.tabFood);
+    	cinnamonPowder = new SpiceItUpItem("CinnamonPowder",CreativeTabs.tabFood);
     	GameRegistry.registerItem(cinnamonPowder, "cinnamonPowder");
     	
-    	cinnamonApple = new SpiceOfLifeFood("CinnamonApple", 4, 0.3F, false, new PotionEffect(Potion.regeneration.id,40,3));
+    	cinnamonApple = new SpiceItUpFood("CinnamonApple", 4, 0.3F, false, new PotionEffect(Potion.regeneration.id,40,3));
     	GameRegistry.registerItem(cinnamonApple, "cinnamonApple");
     //Recipes
-    	GameRegistry.addShapelessRecipe(new ItemStack(SpiceOfLife.cinnamonPowder), new Object[]
+    	GameRegistry.addShapelessRecipe(new ItemStack(SpiceItUp.cinnamonPowder), new Object[]
     			{
-    			SpiceOfLife.cinnamonBark
+    			SpiceItUp.cinnamonBark
     			}
     	
     		);
-    	GameRegistry.addRecipe(new ItemStack(SpiceOfLife.cinnamonApple), new Object[] {"###","#A#","###", '#', SpiceOfLife.cinnamonPowder, 'A', Items.apple});
+    	GameRegistry.addRecipe(new ItemStack(SpiceItUp.cinnamonApple), new Object[] {"###","#A#","###", '#', SpiceItUp.cinnamonPowder, 'A', Items.apple});
     }
     
     @EventHandler
@@ -96,7 +96,7 @@ public class SpiceOfLife
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-    	System.out.println("Finished Loading " + SpiceOfLife.NAME + " " + SpiceOfLife.VERSION + " " + SpiceOfLife.VERSIONNAME);
+    	System.out.println("Finished Loading " + SpiceItUp.NAME + " " + SpiceItUp.VERSION + " " + SpiceItUp.VERSIONNAME);
     }
         
    

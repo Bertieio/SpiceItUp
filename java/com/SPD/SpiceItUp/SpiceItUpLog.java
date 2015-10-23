@@ -1,12 +1,12 @@
-package com.SPD.SpiceOfLife;
+package com.SPD.SpiceItUp;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.IBlockAccess;
 
-public class SpiceOfLifeLog extends SpiceOfLifeBlock{
+public class SpiceItUpLog extends SpiceItUpBlock{
 
-	public SpiceOfLifeLog(Material material, String unlocalizedName, CreativeTabs creativeTab, Float hardness,
+	public SpiceItUpLog(Material material, String unlocalizedName, CreativeTabs creativeTab, Float hardness,
 			SoundType stepSound, String harvestTool, int harvestlevel) {
 		super(material, unlocalizedName, creativeTab, hardness, stepSound, harvestTool, harvestlevel);
 		// TODO Auto-generated constructor stub

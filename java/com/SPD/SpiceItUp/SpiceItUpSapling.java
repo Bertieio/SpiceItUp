@@ -1,4 +1,4 @@
-package com.SPD.SpiceOfLife;
+package com.SPD.SpiceItUp;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -23,15 +23,15 @@ import net.minecraft.world.gen.feature.WorldGenTaiga2;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.event.terraingen.TerrainGen;
 
-public class SpiceOfLifeSapling extends BlockSapling 
+public class SpiceItUpSapling extends BlockSapling 
 {
-	private static SpiceOfLifeTree treeGen = new SpiceOfLifeTree(true);
+	private static SpiceItUpTree treeGen = new SpiceItUpTree(true);
 	
-	public SpiceOfLifeSapling(String type)
+	public SpiceItUpSapling(String type)
 	{
 		setHardness(0.0F);
 		setStepSound(soundTypeGrass);
-		setBlockName(SpiceOfLife.MODID +"_"+ type + "Sapling");
+		setBlockName(SpiceItUp.MODID +"_"+ type + "Sapling");
 		//setCreativeTab(CreativeTabs.tabDecorations);
 	}
 
@@ -39,8 +39,8 @@ public class SpiceOfLifeSapling extends BlockSapling
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister)
 	{
-		String name = this.getUnlocalizedName().substring(17) ; 
-		blockIcon = par1IconRegister.registerIcon(SpiceOfLife.MODID +":"+name);
+		String name = this.getUnlocalizedName().substring(15) ; 
+		blockIcon = par1IconRegister.registerIcon(SpiceItUp.MODID +":"+name);
 	}
 
 	@Override

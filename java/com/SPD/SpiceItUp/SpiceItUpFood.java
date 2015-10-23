@@ -1,4 +1,4 @@
-package com.SPD.SpiceOfLife;
+package com.SPD.SpiceItUp;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -7,14 +7,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-public class SpiceOfLifeFood extends ItemFood {
+public class SpiceItUpFood extends ItemFood {
 
 	private PotionEffect[] effects;
 
-	public SpiceOfLifeFood(String unlocalizedName, int healAmount, float saturationModifier, boolean wolvesFavorite, PotionEffect... effects) {
+	public SpiceItUpFood(String unlocalizedName, int healAmount, float saturationModifier, boolean wolvesFavorite, PotionEffect... effects) {
 	    super(healAmount, saturationModifier, wolvesFavorite);
-	    this.setUnlocalizedName(SpiceOfLife.MODID + "_" + unlocalizedName);
-	    this.setTextureName(SpiceOfLife.MODID + ":" + unlocalizedName);
+	    this.setUnlocalizedName(SpiceItUp.MODID + "_" + unlocalizedName);
+	    this.setTextureName(SpiceItUp.MODID + ":" + unlocalizedName);
 	    this.setCreativeTab(CreativeTabs.tabFood);
 	    this.effects = effects;
 	}
