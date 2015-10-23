@@ -19,3 +19,7 @@ Please feel free to suggest ideas and improvments.
 ###Blocks:
 - Cinnamon Wood 
 - Cinnamon Leaves
+- Cinnamon Saplings
+
+###World Gen
+- Cinnamon Trees (Don't currenly spawn in world but can grow from saplings) 
