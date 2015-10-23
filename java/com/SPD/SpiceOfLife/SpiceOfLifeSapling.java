@@ -10,6 +10,7 @@ import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -25,20 +26,21 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 public class SpiceOfLifeSapling extends BlockSapling 
 {
 	private static SpiceOfLifeTree treeGen = new SpiceOfLifeTree(true);
-
+	
 	public SpiceOfLifeSapling(String type)
 	{
 		setHardness(0.0F);
 		setStepSound(soundTypeGrass);
-		setBlockName(SpiceOfLife.MODID + "_Sapling" + type);
-		setCreativeTab(CreativeTabs.tabDecorations);
+		setBlockName(SpiceOfLife.MODID +"_"+ type + "Sapling");
+		//setCreativeTab(CreativeTabs.tabDecorations);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister)
 	{
-		blockIcon = par1IconRegister.registerIcon(SpiceOfLife.MODID+":" + getUnlocalizedName());
+		String name = this.getUnlocalizedName().substring(17) ; 
+		blockIcon = par1IconRegister.registerIcon(SpiceOfLife.MODID +":"+name);
 	}
 
 	@Override
@@ -72,5 +74,6 @@ public class SpiceOfLifeSapling extends BlockSapling
 	{
 		return par1 & 7;
 	}
+	
 }
 

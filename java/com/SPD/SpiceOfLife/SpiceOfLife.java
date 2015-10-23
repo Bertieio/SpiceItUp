@@ -60,13 +60,13 @@ public class SpiceOfLife
     	
   //Cinnamon   	
     //Blocks!	
-    	cinnamonWood = new SpiceOfLifeBlock(Material.wood, "CinnamonWood", CreativeTabs.tabMaterials, 2.0F,  net.minecraft.block.Block.soundTypeWood, "axe", 0);
+    	cinnamonWood = new SpiceOfLifeLog(Material.wood, "CinnamonWood", CreativeTabs.tabMaterials, 2.0F,  net.minecraft.block.Block.soundTypeWood, "axe", 0);
     	GameRegistry.registerBlock(cinnamonWood, "cinnamonWood");
       	
-    	cinnamonLeaf = new SpiceOfLifeLeaf("CinnamonLeaf");
+    	cinnamonLeaf = new SpiceOfLifeLeaf("Cinnamon");
     	GameRegistry.registerBlock(cinnamonLeaf, "cinnamonLeaf");
 
-    	cinnamonSapling = new SpiceOfLifeSapling("cinnamon");
+    	cinnamonSapling = new SpiceOfLifeSapling("Cinnamon");
     	GameRegistry.registerBlock(cinnamonSapling, "CinnamonSapling");
     	
     //Items!
