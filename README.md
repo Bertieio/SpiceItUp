@@ -1,6 +1,6 @@
-# SpiceOfLife
+# Spice It Up!
 ##Minecraft 1.7.10
-Spice Of Life adds spices to the Minecraft as a early game replacement for potions. 
+Spice It Up! adds spices to the Minecraft as a early game replacement for potions. 
 Currently its very early in development and doesn't have a release date planed.
 
 It is also the second mod I have made so the code will be iffy and I will have to rewrite it as I learn more. 
