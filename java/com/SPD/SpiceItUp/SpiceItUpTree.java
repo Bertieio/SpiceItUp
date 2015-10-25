@@ -184,7 +184,7 @@ public class SpiceItUpTree extends WorldGenerator implements IWorldGenerator  {
 								block.isReplaceable(world, x, y + yOffset, z)) // replace snow
 						{
 							this.setBlockAndNotifyAdequately(world, x, y + yOffset, z,
-									SpiceItUp.cinnamonWood, 1);
+									SpiceItUp.cinnamonLog, 1);
 						}
 					}
 

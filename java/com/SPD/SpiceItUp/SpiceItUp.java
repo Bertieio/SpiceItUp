@@ -37,6 +37,7 @@ public class SpiceItUp
     public static Block cinnamonWood;
     public static Block cinnamonSapling;
     public static Block cinnamonLeaf;
+    public static Block cinnamonLog;
     //Items!
     public static Item cinnamonBark;
     public static Item cinnamonPowder;  
@@ -63,6 +64,10 @@ public class SpiceItUp
     	cinnamonWood = new SpiceItUpLog(Material.wood, "CinnamonWood", CreativeTabs.tabMaterials, 2.0F,  net.minecraft.block.Block.soundTypeWood, "axe", 0);
     	GameRegistry.registerBlock(cinnamonWood, "cinnamonWood");
       	
+    	cinnamonLog = new SpiceItUpLog(Material.wood, "CinnamonLog", CreativeTabs.tabMaterials, 2.0F,  net.minecraft.block.Block.soundTypeWood, "axe", 0);
+    	GameRegistry.registerBlock(cinnamonLog, "cinnamonLog");
+      	
+    	
     	cinnamonLeaf = new SpiceItUpLeaf("Cinnamon");
     	GameRegistry.registerBlock(cinnamonLeaf, "cinnamonLeaf");
 

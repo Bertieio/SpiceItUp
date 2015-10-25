@@ -10,7 +10,13 @@ public class SpiceItUpEvents {
 	    public void onBlockHarvest(HarvestDropsEvent event){
 	    
 		//CinnamonBark  
-		  if (event.block == Blocks.log && Math.random() <= 0.1F)
+		  if (event.block == SpiceItUp.cinnamonLog)
+			//  event.drops.clear();
+		  		event.drops.add(new ItemStack(SpiceItUp.cinnamonWood));
 	    		event.drops.add(new ItemStack(SpiceItUp.cinnamonBark));
-	    }
+	  //  if (event.block == SpiceItUp.cinnamonWood)
+	    //	  event.drops.clear();
+  		//event.drops.add(new ItemStack(SpiceItUp.cinnamonWood));
+	
+	  }
 }
