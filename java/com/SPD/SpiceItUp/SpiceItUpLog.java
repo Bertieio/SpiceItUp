@@ -42,13 +42,12 @@ public class SpiceItUpLog extends SpiceItUpBlock{
 	    //    p_149666_3_.add(new ItemStack(p_149666_1_, 1, 1));
 //}
 	   @Override
-	   public Item getItemDropped(int metadata, Random random, int fortune) {
-		   ArrayList Drops = new ArrayList();
-		  // Drops.add(SpiceItUp.cinnamonBark);
-		   Drops.add(SpiceItUp.cinnamonWood);
-		   return Item.getItemFromBlock(SpiceItUp.cinnamonWood);
-       }
-
+	   public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
+	       ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
+	       drops.add(new ItemStack(SpiceItUp.cinnamonWood));
+	       drops.add(new ItemStack(SpiceItUp.cinnamonBark));   
+	       return drops;
+	   }
 }
 
 	   
