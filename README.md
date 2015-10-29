@@ -14,7 +14,7 @@ Please feel free to suggest ideas and improvments.
 ###Items:
 - Cinnamon Bark
 - Cinnamon Powder
-- Cinnamon Apple
+- Cinnamon Apple -- 2 sec of level 4 regen
 
 ###Blocks:
 - Cinnamon Wood 
