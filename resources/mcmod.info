@@ -2,7 +2,7 @@
 {
   "modid": "SpiceItUp",
   "name": "Spice It Up",
-  "description": "Adding a lil spice to your life",
+  "description": "Adds spice and herbs as an early game replacement to potions",
   "version": "0.01",
   "mcversion": "1.7.10",
   "url": "",
