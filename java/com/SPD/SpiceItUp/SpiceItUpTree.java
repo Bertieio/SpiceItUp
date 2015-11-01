@@ -22,24 +22,6 @@ public class SpiceItUpTree extends WorldGenerator implements IWorldGenerator  {
 		{
 			super(doNotify);
 		}
-
-		@Override
-		public boolean generate(World world, Random rand, int x, int retries, int z)
-		{
-			for (int c = 0; c < retries; c++)
-			{
-				int y = getSurfaceBlockY(world, x, z);
-
-				if (y > 0 && !growTree(world, rand, x, y + 1, z))
-					retries--;
-
-				x += rand.nextInt(16) - 8;
-				z += rand.nextInt(16) - 8;
-				
-			}
-
-			return true;
-		}
 		public static int getSurfaceBlockY(World world, int x, int z) {
 
 			int y = world.getChunkFromBlockCoords(x, z).getTopFilledSegment() + 16;
@@ -195,9 +177,27 @@ public class SpiceItUpTree extends WorldGenerator implements IWorldGenerator  {
 		}
 
 		@Override
+		public boolean generate(World world, Random rand, int x, int retries, int z)
+		{
+			for (int c = 0; c < retries; c++)
+			{
+				int y = getSurfaceBlockY(world, x, z);
+
+				if (y > 0 && !growTree(world, rand, x, y + 1, z))
+					retries--;
+
+				x += rand.nextInt(16) - 8;
+				z += rand.nextInt(16) - 8;
+			}
+
+			return true;
+		}
+
+		@Override
 		public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator,
 				IChunkProvider chunkProvider) {
 			// TODO Auto-generated method stub
 			
 		}
+		
 }
