@@ -58,6 +58,14 @@ public class SpiceItUp
    //World Gen
     	cinnamonTree = (IWorldGenerator) new SpiceItUpTree();
     	GameRegistry.registerWorldGenerator(cinnamonTree, 1);
+   
+    	
+  //Mint
+  //Chilli
+  //Basil
+  //Elderflower
+  //Paprika
+    	
     	
   //Cinnamon   	
     //Blocks!	
